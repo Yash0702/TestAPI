@@ -34,7 +34,7 @@ $(document).ready(function() {
                 }
             });
         }
-        $("search-box").val(""); //clear search box
+        $("#search-box").val(""); //clear search box
     });
     /* functions to display results in index.html @param res */
     function displayResults(response) {
