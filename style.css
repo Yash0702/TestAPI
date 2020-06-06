@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    background-image: url('2.jpg');
+    background-position: center;
+    background-size: cover;
+    color: black;
+  }
+  .navbar{
+    padding: .8rem;
+  }
+  .navbar-nav li{
+    padding-right: 20px;
+  }
+  .nav-link{
+    font-size: 1.1em !important;
+  }
+#header{
+  font-size: 3rem;
+}
+.book-list{
+  margin-top: 50px;
+  visibility: hidden;
+}
+.card{
+  opacity: .8;
+  margin-top: 2rem;
+}
+footer{
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+  padding: 2rem;
+}
+.footer a{
+  color: #d5d5d5;
+}
+hr.light-100{
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+/*---Media Queries --*/
+@media (max-width: 992px) {
+  #header{
+    font-size: 3rem;
+  }
+  .book-list{
+    margin-top: 50px;
+    visibility: hidden;
+  }
+  .card{
+    opacity: .8;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-left: 8rem;
+    margin-right: 7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #header{
+    font-size: 3rem;
+  }
+  .book-list{
+    margin-top: 30px;
+    visibility: hidden;
+  }
+  .card{
+    opacity: .8;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-left: 8rem;
+    margin-right: 7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #header{
+    font-size: 3rem;
+  }
+  .book-list{
+    margin-top: 30px;
+    visibility: hidden;
+  }
+  .card{
+    opacity: .8;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-left: 8rem;
+    margin-right: 7rem;
+  }
+}
