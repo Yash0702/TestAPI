@@ -6,9 +6,19 @@ $(document).ready(function () {
     var searchData;
 
     //Listener for search button
+    var input = document.getElementById("search-box");
+        input.addEventListener("keyup", function(event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+              // Cancel the default action, if needed
+              event.preventDefault();
+              // Trigger the button element with a click
+              document.getElementById("search").click();
+            }
+          });
     $("#search").click(function () {
         outputList.innerHTML = ""; //empty html output
-        document.body.style.backgroundImage = "url('2.jpg')";
+        document.body.style.backgroundImage = "url('240617.jpg')";
         searchData = $("#search-box").val();
         //Handling empty search input field
         if (searchData === "" || searchData === null) {
@@ -67,7 +77,7 @@ $(document).ready(function () {
     function formatOutput(bookImg, title, author, publisher, bookLink, bookIsbn) {
         var viewUrl = 'book.html?isbn=' + bookIsbn;
         var htmlCard = `
-                        <div class="card" style="background-color: rgb(255, 113, 113); margin-left: 9rem; margin-bottom: 3rem">
+                        <div class="card" style="background-color: rgb(103, 250, 255); margin-left: 9rem; margin-bottom: 3rem">
                         <div class="row no-gutters">
                             <div class="col-md-4">
                                 <img src="${bookImg}" class="card-img" alt="...">
@@ -86,7 +96,7 @@ $(document).ready(function () {
     }
     //handling error displaying empty search box
     function displayError() {
-        alert("search term cannot be empty");
+        alert("Search term cannot be empty");
     }
 });
 

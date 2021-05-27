@@ -13,7 +13,7 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href=""><img src="1.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -28,7 +28,7 @@
                     <a class="nav-link" href="#About">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#foot">ContactUs</a>
+                    <a class="nav-link" href="#foot"></a>
                 </li>
             </ul>
         </div>
@@ -36,55 +36,55 @@
 </nav>
 <!--Search box-->
 <div class="container">
-    <div id="title" class="text-center mt-5" style="font-size: xx-large; color: rgb(255, 0, 157);">Find your BOOK here(ENCUENTRE SU LIBRO AQUÍ)</div> 
+    <div id="title" class="text-center mt-5" style="font-size: xx-large; color: rgb(151, 252, 255); padding: 1em;">Find your BOOK here(ENCUENTRE SU LIBRO AQUÍ)</div> 
     <div class="row">
-        <div id="input" class="input-group mx-auto col-lg-6 col-md-8 col-sm-12">
+        <div id="input" class="input-group mx-auto col-lg-6 col-md-8 col-sm-12" style="padding: 1em;">
             <input id="search-box" type="text" class="form-control" placeholder="Search Books...">
-            <button id="search" class="btn btn-primary" onclick="">Search</button>
+            <button id="search" class="btn btn-outline-secondary" onclick="displayResults()">Search</button>
         </div>
     </div>
 </div>
 <!--Book list-->
-<div class="book-list">
-    <h2 class="text-center" style="color: rgb(255, 238, 0);">Search Results</h2>
+<div class="book-list" style="color: black;">
+    <h2 class="text-center" style="color: rgb(255, 255, 255);">Search Results</h2>
     <div id="list-output" class="row">
         <div class="row">
             <!--cards-->
         </div>
     </div>
 </div>
-    <!--Footer-->
+<!--About-->
+<div id= "About" class="container-fluid padding" style="color: bisque; padding-left: 5em; padding-right: 1em;">
+    <div class="row padding">
+        <div class="col-md-12 col-lg-6">
+            <hr>
+            <h2>About BookLib</h2>
+            <p>All your book collections with every extra book for your ever changing mood, BookLib is the plcae you could find them all</p>
+            <p>This website is RESTful and uses Google Books API as backbone for search and display operations for any book you find!</p>
+            <p>You are just few clicks behind to turn over sharp pages, Start off browsing your books and Share your feedbacks below..:)</p>
+        </div>
+        <div class="col-lg-6">
+            <img src="4.gif" style="max-width: 100%; padding: 4em;">
+        </div>
+    </div>
+</div>
+<!-- The social media icon bar -->
+<div class="icon-bar">
+    <a href="#" class="facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+    <a href="#" class="twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+    <a href="#" class="github"><i class="fab fa-github"></i></a>
+    <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+    <a href="#" class="slack"><i class="fab fa-slack"></i></a>
+</div>
+<!--Footer-->
 <footer id="foot">
-    <div class="container">
-    <div class="row text-center">
-        <div class="col-md-4">
-            <img src="1.png">
-            <hr class="light">
-            <p>777-222-002</p>
-            <p>yashyashwanth02@gmail.com</p>
-            <p>139 Pearl Street</p>
-            <p>Hyderabad, Telangana 500049</p>
-        </div>
-        <div class="col-md-4">
-            <hr class="light">
-            <h5>Our Service Hours</h5>
-            <hr class="light">
-            <p>24/7 Online services</p>
-        </div>
-        <div class="col-md-4">
-            <hr class="light">
-            <h5>Our Head office branches</h5>
-            <hr class="light">
-            <p>Chennai, 600007</p>
-            <p>Mumbai, 400037</p>
-            <p>Kolkata, 700059</p>
-            <p>Delhi, 110027</p>
-        </div>
+    <div class="container-fluid padding">
+        <div class="row text-center">
         <div class="col-12">
             <hr class="light-100">
             <h5>&copy; bookLIB.com</h5>
         </div>
-    </div>
+        </div>
     </div>
 </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
