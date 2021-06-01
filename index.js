@@ -1,3 +1,8 @@
+var preloader = document.getElementById('loading');
+function loading(){
+    preloader.style.display = 'none';
+}
+
 $(document).ready(function () {
     var item, title, author, publisher, bookLink, bookImg
     var outputList = document.getElementById("list-output");
@@ -55,6 +60,8 @@ $(document).ready(function () {
             publisher1 = item.volumeInfo.publisher;
             bookLink1 = item.volumeInfo.previewLink;
             bookIsbn = item.volumeInfo.industryIdentifiers[1].identifier
+            bookOclc = item.volumeInfo.industryIdentifiers[1].identifier
+            bookLccn = item.volumeInfo.industryIdentifiers[1].identifier
             bookImg1 = (item.volumeInfo.imageLinks) ? item.volumeInfo.imageLinks.thumbnail : placeHldr;
 
             item2 = response.items[i + 1];
@@ -63,12 +70,14 @@ $(document).ready(function () {
             publisher2 = item2.volumeInfo.publisher;
             bookLink2 = item2.volumeInfo.previewLink;
             bookIsbn2 = item2.volumeInfo.industryIdentifiers[1].identifier
+            bookOclc2 = item2.volumeInfo.industryIdentifiers[1].identifier
+            bookLccn2 = item2.volumeInfo.industryIdentifiers[1].identifier
             bookImg2 = (item2.volumeInfo.imageLinks) ? item2.volumeInfo.imageLinks.thumbnail : placeHldr;
 
             //output to output list
             outputList.innerHTML += '<div class="col-lg-5">' +
-                formatOutput(bookImg1, title1, author1, publisher1, bookLink1, bookIsbn)
-            formatOutput(bookImg2, title2, author2, publisher2, bookLink2, bookIsbn2)
+                formatOutput(bookImg1, title1, author1, publisher1, bookLink1, bookIsbn, bookOclc, bookLccn)
+            formatOutput(bookImg2, title2, author2, publisher2, bookLink2, bookIsbn2, bookOclc2, bookLccn2)
             '</div>';
             console.log(outputList);
         }
@@ -76,6 +85,8 @@ $(document).ready(function () {
     /* Template for bootstrap Cards*/
     function formatOutput(bookImg, title, author, publisher, bookLink, bookIsbn) {
         var viewUrl = 'book.html?isbn=' + bookIsbn;
+        var viewUrl = 'book.html?oclc=' + bookOclc; 
+        var viewUrl = 'book.html?lccn=' + bookLccn;
         var htmlCard = `
                         <div class="card" style="background-color: rgb(103, 250, 255); margin-left: 9rem; margin-bottom: 3rem">
                         <div class="row no-gutters">
